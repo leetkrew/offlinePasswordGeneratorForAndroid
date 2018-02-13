@@ -6,117 +6,156 @@
     android:layout_height="match_parent"
     tools:context="com.rjregalado.offlinepasswordgenerator.MainActivity">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
 
 
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
 
-        android:orientation="vertical">
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generated Password" />
+
+            <EditText
+                android:id="@+id/txtGeneratedPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="54dp"
+                tools:layout_editor_absoluteY="186dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Password Length" />
+
+            <EditText
+                android:id="@+id/txtLength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                tools:layout_editor_absoluteX="153dp"
+
+
+                tools:layout_editor_absoluteY="232dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Switch
+                android:id="@+id/chkPunctuations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Include Punctuations" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Switch
+                android:id="@+id/chkProgrammingCharacters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inclide Programming Characters" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Switch
+                android:id="@+id/chkSimilarCharacters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Similar Characters" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Switch
+                android:id="@+id/chkUpperCase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Include UPPERCASE" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btngenerate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generate"
+                tools:layout_editor_absoluteX="145dp"
+                tools:layout_editor_absoluteY="333dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnGenerateAndCopy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generate and Copy to Clipboard" />
+
+
+            <Button
+                android:id="@+id/btnCopy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Copy to Clipboard"
+                tools:layout_editor_absoluteX="145dp"
+                tools:layout_editor_absoluteY="333dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:text="Developed by: RJ Regalado (www.rjregalado.com)"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="429dp" />
+
+
+        </LinearLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Generated Password" />
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-0525976082076681/2191347408"></com.google.android.gms.ads.AdView>
 
-        <EditText
-            android:id="@+id/txtGeneratedPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            tools:layout_editor_absoluteX="54dp"
-            tools:layout_editor_absoluteY="186dp" />
+    </RelativeLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Password Length" />
-
-        <EditText
-            android:id="@+id/txtLength"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            tools:layout_editor_absoluteX="153dp"
-
-
-            tools:layout_editor_absoluteY="232dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Switch
-            android:id="@+id/chkPunctuations"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Include Punctuations" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Switch
-            android:id="@+id/chkProgrammingCharacters"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Inclide Programming Characters" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Switch
-            android:id="@+id/chkSimilarCharacters"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Similar Characters" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Switch
-            android:id="@+id/chkUpperCase"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Include UPPERCASE" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btngenerate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Generate"
-            tools:layout_editor_absoluteX="145dp"
-            tools:layout_editor_absoluteY="333dp" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/btnGenerateAndCopy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Generate and Copy" />
-
-
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
